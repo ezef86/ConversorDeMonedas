@@ -1,29 +1,122 @@
-### IntelliJ IDEA ###
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+# .gitignore for Java projects using IntelliJ IDEA, Maven/Gradle
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
+# Byte-code
+*.class
+
+# Log files
+*.log
+logs/
+# hs_err_pid* files are created by the JVM when it crashes
+hs_err_pid*
+
+# Package files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Virtual Machine crash logs, see http://www.oracle.com/technetwork/java/javase/felog-138657.html
+replay_pid*
+
+# Build tool generated files
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Gradle
+build/
+.gradle/
+# Ignoring gradle-wrapper.jar can be controversial.
+# If you want to ensure everyone uses the same Gradle version, commit gradle-wrapper.jar and gradlew scripts.
+# If not, and you expect devs to have Gradle installed, you can ignore it.
+# For consistency, it's often recommended TO COMMIT gradle/wrapper/gradle-wrapper.jar
+# gradle-wrapper.jar
+
+# IntelliJ IDEA specific
+.idea/
+# .idea/workspace.xml is often user-specific and changes frequently.
+# .idea/libraries/ contains project library definitions. Can be committed if shared, or ignored if generated from build tool.
+# If using Maven/Gradle, these are usually regenerated, so ignoring is common.
+# .idea/modules.xml
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/misc.xml
+# .idea/vcs.xml # Can be committed if you want to share VCS settings
+# .idea/uiDesigner.xml # If using IntelliJ GUI Designer and want to share forms
+# .idea/gradle.xml
+# .idea/libraries/
+# *.iws was for older IntelliJ versions
+*.iws
+# *.iml is module specific, usually generated. If you have a multi-module project where modules are manually defined (not just from Maven/Gradle), you might commit them.
+# For Maven/Gradle projects, it's often better to regenerate them.
+*.iml
+# *.ipr was for older IntelliJ project format
+*.ipr
+# If you use IntelliJ's shelf feature and don't want to share shelves
+.idea/shelf/
+
+# User-specific settings (e.g., local run configurations not meant to be shared)
+# .idea/runConfigurations/ # Commit shared run configurations, ignore user-specific ones by pattern or by not adding them.
+
+# Secrets and local configuration
+.env
+*.env
+local.properties
+
+# OS generated files
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# Linux
+*~
+.#*
+
+# Other
+# Eclipse Project files
 .project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+.classpath
+.settings/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# NetBeans Project files
+nbproject/
+build.xml # If used by NetBeans and not part of a shared Ant build
 
-### VS Code ###
+# VS Code
 .vscode/
 
-### Mac OS ###
-.DS_Store
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Coverage reports
+jacoco/
+cobertura/
+# etc.
+
+# Test results
+/test-results/
+/failsafe-reports/
+/surefire-reports/
+
+# Secrets (double ensure these are not committed)
+secrets/
+*.secret
+*.credential
+
+# Downloads and user-specific artifacts
+downloads/
+dist/
